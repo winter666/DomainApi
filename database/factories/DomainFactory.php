@@ -18,6 +18,7 @@ class DomainFactory extends Factory
     {
         return [
             'name' => $this->faker->unique()->domainName(),
+            'is_blocked' => $this->faker->boolean(),
         ];
     }
 }

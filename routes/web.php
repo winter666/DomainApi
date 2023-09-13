@@ -14,4 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::middleware('domain_verifier')->group(function() {
+    Route::get('/content', [HostingController::class, 'getContent']);
+});
+
 Route::fallback([HostingController::class, 'fallback']);

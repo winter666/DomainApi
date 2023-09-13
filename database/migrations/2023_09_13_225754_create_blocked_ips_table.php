@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('domains', function (Blueprint $table) {
+        Schema::create('blocked_ips', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
-            $table->boolean('is_blocked')->default(false);
+            $table->ipAddress('name')->unique();
+            $table->unsignedBigInteger('domain_id');
+            $table->foreign('domain_id')
+                ->references('id')
+                ->on('domains')
+                ->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -24,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('domains');
+        Schema::dropIfExists('blocked_ips');
     }
 };
