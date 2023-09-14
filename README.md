@@ -23,7 +23,7 @@
 
 ## Второстепенные задачи
 
-- Разобраться почему не проходит```tests/Feature/Api/DomainUpdateTest```
+- Разобраться почему не проходит```tests/Feature/Api/DomainUpdateTest```  (ответ в `app/Http/Controllers/Api/DomainController.php`)
 
-- Описать в каких случаях ```tests/Unit/FakerTest```  будет завершаться с ошибкой
+- Описать в каких случаях ```tests/Unit/FakerTest```  будет завершаться с ошибкой (ответ в `tests/Unit/FakerTest.php`)
 
