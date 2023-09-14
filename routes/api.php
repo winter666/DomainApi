@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::put('/domains/{id}', [DomainController::class, 'update']);
+Route::put('/domains/{domain}', [DomainController::class, 'update']);

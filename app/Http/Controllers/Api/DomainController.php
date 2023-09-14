@@ -10,7 +10,11 @@ class DomainController extends Controller
 {
     public function __construct()
     {
-        $this->authorizeResource(Domain::class);
+        /**
+         * Проблема была в том, что нужно было сопоставить вторым аргументом
+         * указатель с маршрута (я решил переименовать в domain)
+         */
+        $this->authorizeResource(Domain::class, 'domain');
     }
 
     public function update(Request $request, Domain $domain)
