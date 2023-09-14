@@ -4,7 +4,6 @@ namespace App;
 
 use App\Models\Domain;
 use Illuminate\Http\Request as HttpRequest;
-use Illuminate\Support\Facades\Log;
 
 class Request extends HttpRequest
 {

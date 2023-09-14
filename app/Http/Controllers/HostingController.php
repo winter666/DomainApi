@@ -8,9 +8,9 @@ use App\Request;
 class HostingController extends Controller
 {
 
-    public function getContent(Request $request, HostingRouter $router)
+    public function index(Request $request, HostingRouter $router)
     {
-        return $router->handle($request);
+        return $request->domain()->name;
     }
 
     public function fallback(Request $request, HostingRouter $router)

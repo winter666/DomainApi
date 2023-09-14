@@ -12,6 +12,6 @@ class BlockedDomainHandler extends BaseHandler
 
     public function verify(?Domain $domain): bool
     {
-        return !(bool)$domain?->is_blocked;
+        return $domain && !$domain->is_blocked;
     }
 }

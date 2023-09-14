@@ -33,7 +33,7 @@ class DomainVerifier
              * @var IDomainHandler $handlerInstance
              */
             if (!$handlerInstance->verify($request->domain())) {
-                return new Response('Access denied', 403);
+                return new Response('no content');
             }
         }
 
